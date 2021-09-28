@@ -4,7 +4,7 @@ MV slider animation with jQuery
 ### Sample is here.
 https://wakasato.github.io/MV_slider_animation/
 <br>
-This is my jQuery codes for MV slider animation which has moving child elements inside photo.
+This is my jQuery codes for MV slider animation which has moving child elements inside photos.
 There are many simple slider liberary that can slide each images.
 Those aren't enough for my project.
 I wanted to move also child elements inside images.
@@ -16,7 +16,7 @@ It starts after a lapse time which function has.
 
 So, I made DocumentReady method executed once before setInterval method start.<br>
 
-It's readly simple function. 
+Those are quite simple functions. 
 But If you would make from scratch, It could be tiring.
 That's why I shared this code.<br>
 
