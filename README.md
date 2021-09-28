@@ -1,6 +1,9 @@
 # MV_slider_animation
 MV slider animation with jQuery
 
+Sample is here.
+https://wakasato.github.io/MV_slider_animation/
+
 This is my jQuery codes for MV slider animation which has moving child elements inside photo.
 There are many simple slider liberary that can slide each images.
 Those aren't enough for my project.
@@ -20,6 +23,9 @@ That's why I shared this code.
 
 Japanese translation-------
 写真の中の子要素が動く、MVスライダーアニメーションのjQueryコードです。
+サンプルは以下です。
+https://wakasato.github.io/MV_slider_animation/
+
 各画像をスライドさせるだけのシンプルなスライダーライブラリはたくさんあります。
 自分の案件で、それでは不十分なものがありました。
 画像の中の子要素も動かす必要があったのです。
