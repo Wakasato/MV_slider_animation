@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ja"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>MV animation sample</title>
+  <link href="./asset/css" rel="stylesheet">
+  <style>
+    body,
+    ul,
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .inner {
+      max-width: 960px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+    }
+
+    main {
+      position: relative;
+    }
+    main ul{
+      width: 100%;
+      margin: auto;
+      list-style: none;
+      position: relative;
+      min-height: 500px;
+      overflow: hidden;
+    }
+    main li{
+      width: 100%;
+      position: absolute;
+      top: 0;
+      opacity: 0;
+     transition: 2s;
+    }
+    main p {
+      position: absolute;
+      color: white;
+      font-size: 80px;
+      font-family: 'Noto Serif JP', serif;
+      display: none;
+    }
+/*-------- 画像1枚目------- */
+ .catch1 {
+    top: 0;
+    left: 100px;
+    opacity: 0;
+    display: block;
+    transform: translateX(-100px);
+}
+.catch2 {
+  top: 140px;
+  left: 100px;
+  opacity: 0;
+  display: block;
+}
+.photo1.active{
+  transition: 2s;
+  opacity: 1;
+}
+.catch1.active{
+  transition: 2s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.catch2.active{
+   transition: 2s;
+  opacity: 1;
+}
+/*-------- 画像2枚目------- */
+.photo2.active{
+  transition: 2s;
+  opacity: 1;
+}
+.catch3 {
+  top: 0;
+  left: 100px;
+  opacity: 0;
+  display: block;
+  transform: translateX(100px);
+}
+.catch4 {
+ top: 140px;
+ left: 100px;
+ opacity: 0;
+ display: block;
+ transform: translateY(100px);
+}.catch3.active{
+  transition: 2s;
+  opacity: 1;
+  transform: translateX(0);
+}
+.catch4.active{
+  transition: 2s;
+  opacity: 1;
+  transform: translateY(0);
+}
+/*-------- 画像3枚目------- */
+.photo3.active{
+  transition: 2s;
+  opacity: 1;
+}
+.catch5 {
+  top: 0;
+  left: 100px;
+  opacity: 0;
+  display: block;
+}
+.catch6 {
+  top: 140px;
+  left: 100px;
+  opacity: 0;
+  display: block;
+}
+.catch5.active{
+  transition: 2s;
+  opacity: 1;
+}
+.catch6.active{
+  transition: 2s;
+  opacity: 1;
+}
+  </style>
+</head>
+
+<body>
+  <div class="inner">
+    <main>
+      <ul>
+        <li class="photo1 active">
+          <img src="./asset/ocean.jpg" alt="photo of ocean">
+          <p class="catch1">海は</p>
+          <p class="catch2">雄大だ</p>
+        </li>
+        <li class="photo2">
+          <img src="./asset/flower.jpg" alt="photo of flower">
+          <p class="catch3">花は</p>
+          <p class="catch4">綺麗だ</p>
+        </li>
+        <li class="photo3">
+          <img src="./asset/sky.jpeg" alt="photo of sky">
+          <p class="catch5">空は</p>
+          <p class="catch6">蒼い</p>
+        </li>
+      </ul>
+    </main>
+  </div>
+  <script src="./asset/jquery.min.js"></script>
+  <script>
+    $(function () {
+    // window読み込みと共にaimation呼び出し
+    // ページ内に該当クラスが存在したら activeクラスを付与
+    $(document).ready(function(){
+      setTimeout(function(){
+                 $(".photo1").addClass("active");
+            },0);
+            setTimeout(function(){
+                 $(".catch1").addClass("active");
+            },1000);
+            setTimeout(function(){
+                 $(".catch2").addClass("active");
+            },2000);
+            setTimeout(function(){
+                 $(".photo1").removeClass("active");
+            },3000);
+            setTimeout(function(){
+                 $(".catch1").removeClass("active");
+            },3000);
+            setTimeout(function(){
+                 $(".catch2").removeClass("active");
+            },3000);
+        });
+           //photo2
+           setTimeout(function(){
+                 $(".photo2").addClass("active");
+            },3000);
+            setTimeout(function(){
+                 $(".catch3").addClass("active");
+            },4000);
+            setTimeout(function(){
+                 $(".catch4").addClass("active");
+            },5000);
+                  setTimeout(function(){
+                 $(".photo2").removeClass("active");
+            },6000);   
+            setTimeout(function(){
+                 $(".catch3").removeClass("active");
+            },6000);
+            setTimeout(function(){
+                 $(".catch4").removeClass("active");
+            },6000);
+               //photo3
+               setTimeout(function(){
+                 $(".photo3").addClass("active");
+            },7000);
+            setTimeout(function(){
+                 $(".catch5").addClass("active");
+            },8000);
+            setTimeout(function(){
+                 $(".catch6").addClass("active");
+            },9000);
+            //photo3
+              setTimeout(function(){
+                 $(".photo3").removeClass("active");
+            },10000);   
+            setTimeout(function(){
+                 $(".catch5").removeClass("active");
+            },10000);
+            setTimeout(function(){
+                 $(".catch6").removeClass("active");
+            },10000);
+  });
+  
+//setInterval 2回目以降のアニメはこちらを繰り返す。
+
+setInterval(function(){
+  //photo1
+           setTimeout(function(){
+                 $(".photo1").addClass("active");
+            },0);
+            setTimeout(function(){
+                 $(".catch1").addClass("active");
+            },1000);
+            setTimeout(function(){
+                 $(".catch2").addClass("active");
+            },2000);
+   //photo2
+            setTimeout(function(){
+                 $(".photo2").addClass("active");
+            },3000);
+            setTimeout(function(){
+                 $(".catch3").addClass("active");
+            },4000);
+            setTimeout(function(){
+                 $(".catch4").addClass("active");
+            },5000);
+   //photo3
+            setTimeout(function(){
+                 $(".photo3").addClass("active");
+            },7000);
+            setTimeout(function(){
+                 $(".catch5").addClass("active");
+            },8000);
+            setTimeout(function(){
+                 $(".catch6").addClass("active");
+            },9000);
+  //クラスを剥奪する
+            setTimeout(function(){
+                 $(".photo1").removeClass("active");
+            },3000);
+            setTimeout(function(){
+                 $(".catch1").removeClass("active");
+            },3000);
+            setTimeout(function(){
+                 $(".catch2").removeClass("active");
+            },3000);
+      //photo2
+            setTimeout(function(){
+                 $(".photo2").removeClass("active");
+            },6000);   
+            setTimeout(function(){
+                 $(".catch3").removeClass("active");
+            },6000);
+            setTimeout(function(){
+                 $(".catch4").removeClass("active");
+            },6000);
+      //photo3
+            setTimeout(function(){
+                 $(".photo3").removeClass("active");
+            },10000);   
+            setTimeout(function(){
+                 $(".catch5").removeClass("active");
+            },10000);
+            setTimeout(function(){
+                 $(".catch6").removeClass("active");
+            },10000);
+    },10000);  
+  </script>
+</body></html>
