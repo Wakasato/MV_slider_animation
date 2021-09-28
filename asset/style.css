@@ -1,0 +1,121 @@
+body,
+ul,
+h1 {
+  margin: 0;
+  padding: 0;
+}
+
+.inner {
+  max-width: 960px;
+  margin: 0 auto;
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+
+main {
+  position: relative;
+}
+main ul{
+  width: 100%;
+  margin: auto;
+  list-style: none;
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+main li{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+ transition: 2s;
+}
+main p {
+  position: absolute;
+  color: white;
+  font-size: 80px;
+  font-family: 'Noto Serif JP', serif;
+  display: none;
+}
+/*-------- 画像1枚目------- */
+.catch1 {
+top: 0;
+left: 100px;
+opacity: 0;
+display: block;
+transform: translateX(-100px);
+}
+.catch2 {
+top: 140px;
+left: 100px;
+opacity: 0;
+display: block;
+}
+.photo1.active{
+transition: 2s;
+opacity: 1;
+}
+.catch1.active{
+transition: 2s;
+opacity: 1;
+transform: translateX(0);
+}
+.catch2.active{
+transition: 2s;
+opacity: 1;
+}
+/*-------- 画像2枚目------- */
+.photo2.active{
+transition: 2s;
+opacity: 1;
+}
+.catch3 {
+top: 0;
+left: 100px;
+opacity: 0;
+display: block;
+transform: translateX(100px);
+}
+.catch4 {
+top: 140px;
+left: 100px;
+opacity: 0;
+display: block;
+transform: translateY(100px);
+}.catch3.active{
+transition: 2s;
+opacity: 1;
+transform: translateX(0);
+}
+.catch4.active{
+transition: 2s;
+opacity: 1;
+transform: translateY(0);
+}
+/*-------- 画像3枚目------- */
+.photo3.active{
+transition: 2s;
+opacity: 1;
+}
+.catch5 {
+top: 0;
+left: 100px;
+opacity: 0;
+display: block;
+}
+.catch6 {
+top: 140px;
+left: 100px;
+opacity: 0;
+display: block;
+}
+.catch5.active{
+transition: 2s;
+opacity: 1;
+}
+.catch6.active{
+transition: 2s;
+opacity: 1;
+}
